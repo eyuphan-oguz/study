@@ -8,6 +8,15 @@ class DailyProgress extends StatefulWidget {
 
 class _DailyProgressState extends State<DailyProgress> {
   List<bool> _workHours = List.generate(24, (index) => false);
+  late int numberOfDays;
+  DateTime _dateTime=DateTime.now();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    numberOfDays=getDaysInMonth();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +27,23 @@ class _DailyProgressState extends State<DailyProgress> {
         title: Text('Daily Progress'),
       ),
       body: GridView.count(
-        crossAxisCount: 6,
+        crossAxisCount: 7,
         children: List.generate(
-          24,
+          numberOfDays,
           (index) {
-            Color color = _getColor(index);
-            return Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: color,
+            Color color = Colors.green;
+            return GestureDetector(
+              onTap: (){
+                print(index+1);
+                print(findDayOfWeekByIndex(index: index+1, month: _dateTime.month, year: _dateTime.year));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: color,
+                  
+                ),
+                child: Text((index+1).toString()),
               ),
             );
           },
@@ -34,14 +51,5 @@ class _DailyProgressState extends State<DailyProgress> {
       ),
     );
   }
-
-  Color _getColor(int index) {
-    if (_workHours[index]) {
-      return Colors.green[800]!;
-    } else if (index < DateTime.now().hour) {
-      return Colors.green[400]!;
-    } else {
-      return Colors.green[100]!;
-    }
-  }
 }
+
