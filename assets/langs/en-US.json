@@ -1,3 +1,11 @@
 {
-    "welcome" : "Welcome"
+    "welcome" : "Welcome",
+    
+    "profile":{
+        "social":{
+            "followers" : "Followers",
+            "following" : "Following",
+            "posts" : "Posts"
+        }
+    }
 }

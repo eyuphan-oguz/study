@@ -64,4 +64,8 @@ abstract class LocaleKeys {
   static const home_setting_applicationTour = 'home.setting.applicationTour';
   static const home_setting = 'home.setting';
   static const home = 'home';
+  static const profile = 'profile';
+  static const profile_social_followers="profile.social.followers";
+  static const profile_social_following="profile.social.following";
+  static const profile_social_posts="profile.social.posts";
 }

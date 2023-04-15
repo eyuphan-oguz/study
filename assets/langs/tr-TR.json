@@ -1,3 +1,11 @@
 {
-    "welcome" : "Hoşgeldiniz"
+    "welcome" : "Hoşgeldiniz",
+    
+    "profile":{
+        "social":{
+            "followers" : "Takipçi",
+            "following" : "Takip",
+            "posts" : "Gönderiler"
+        }
+    }
 }

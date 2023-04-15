@@ -7,6 +7,7 @@ import 'package:studygit/model/custom_theme_data_model.dart';
 import 'package:studygit/view/container_widget.dart';
 import 'package:studygit/view/countdownPageView.dart';
 import 'package:studygit/view/mode_view.dart';
+import 'package:studygit/view/profile_page_view.dart';
 import 'package:studygit/view/study_container.dart';
 
 void main() {
