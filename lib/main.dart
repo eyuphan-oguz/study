@@ -13,6 +13,7 @@ void main() {
   runApp(EasyLocalization(
       child: MyApp(),
       supportedLocales: LanguageManager.instance?.supportedLocales,
+      startLocale: LanguageManager.instance?.enLocale,
       path: ApplicationConstants.LANG_ASSET_PATH));
 }
 
