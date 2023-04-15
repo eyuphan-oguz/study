@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:studygit/components/text/locale_text.dart';
+import 'package:studygit/constant/extension/string_extension.dart';
+import 'package:studygit/constant/init/lang/locale_keys.g.dart';
 import 'package:studygit/model/custom_theme_data_model.dart';
+import 'package:studygit/view/countdownPageView.dart';
 
 
 class ModeView extends StatefulWidget {
@@ -13,8 +17,11 @@ class ModeView extends StatefulWidget {
 class _ModeViewState extends State<ModeView> {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(LocaleKeys.welcome.locale),
+      ),
       body: Center(
         child: Column(
           children: [
@@ -23,6 +30,7 @@ class _ModeViewState extends State<ModeView> {
                 return ElevatedButton(
                   onPressed: () {
                     model.setThemeData(data: ThemeData.dark());
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>CountdownPageView()));
                   },
                   child: Text("Dark Mode"),
                 );
@@ -33,6 +41,7 @@ class _ModeViewState extends State<ModeView> {
                 return ElevatedButton(
                   onPressed: () {
                     model.setThemeData(data: ThemeData.light());
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>CountdownPageView()));
                   },
                   child: Text("light Mode"),
                 );
