@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: Provider.of<CustomThemeDataModel>(context).getThemeData,
-            home: ModeView(),
+            home: ProfilePageView(),
           );
         },
       ),

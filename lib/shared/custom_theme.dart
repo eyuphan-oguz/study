@@ -6,7 +6,14 @@ class CustomTheme{
   final lightThemeData=ThemeData(
     appBarTheme: AppBarTheme(
       systemOverlayStyle: SystemUiOverlayStyle.dark,
-      color: Colors.white
+      color: Colors.red
+    ),
+  );
+
+  final darkThemeData=ThemeData(
+    appBarTheme: AppBarTheme(
+      systemOverlayStyle: SystemUiOverlayStyle.dark,
+      color: Colors.red
     ),
   );
 }
