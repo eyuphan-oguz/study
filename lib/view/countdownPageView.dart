@@ -68,7 +68,9 @@ class _CountdownPageViewState extends State<CountdownPageView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child:Column(
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(child:Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         buildTime(),
