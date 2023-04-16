@@ -15,13 +15,7 @@ int getDaysInMonth(){
 }
 
 
-Future<String> getCurrentDayOfWeek({required DateTime now}) async{
-  await initializeDateFormatting('tr_TR', null);
-  DateTime now = DateTime.now();
-  String dayOfWeek = DateFormat('EEEE','tr_TR').format(now);
-  print('Today is $dayOfWeek');
-  return dayOfWeek;
-}
+
 
 
 
@@ -56,6 +50,6 @@ String findDayOfWeekByIndex({required int index, required int month, required in
       dayOfWeek = 'Pazar';
       break;
   }
-
+  print(date);
   return dayOfWeek;
 }
