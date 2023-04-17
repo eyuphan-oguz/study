@@ -42,7 +42,7 @@ String findDayOfWeekByIndex({required int index, required int month, required in
       break;
     case DateTime.friday:
       dayOfWeek = 'Cuma';
-      break;
+      break; 
     case DateTime.saturday:
       dayOfWeek = 'Cumartesi';
       break;
@@ -51,5 +51,6 @@ String findDayOfWeekByIndex({required int index, required int month, required in
       break;
   }
   print(date);
+  print(dayOfWeek);
   return dayOfWeek;
 }
