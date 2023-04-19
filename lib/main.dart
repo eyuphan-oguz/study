@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:studygit/constant/app/app_constant.dart';
 import 'package:studygit/constant/init/lang/language_manager.dart';
+import 'package:studygit/core/widgets/custom_line_widget.dart';
 import 'package:studygit/model/custom_theme_data_model.dart';
 import 'package:studygit/view/container_widget.dart';
 import 'package:studygit/view/countdownPageView.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: Provider.of<CustomThemeDataModel>(context).getThemeData,
-            home: DailyProgress(),
+            home: CustomLineWidget(),
           );
         },
       ),
